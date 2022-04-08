@@ -10,6 +10,8 @@ public class ShowClicker : MonoBehaviour
     private GameObject camera2;
     [SerializeField]
     private GameObject joysticks;
+    [SerializeField]
+    private GameObject clickText;
     public static Mode mode;
 
 
@@ -25,13 +27,14 @@ public class ShowClicker : MonoBehaviour
             tractor.SetActive(true);
             joysticks.SetActive(true);
             camera2.SetActive(false);
+            clickText.SetActive(false);
         }
         else {
             mode = Mode.ClickerMode;
             tractor.SetActive(false);
             joysticks.SetActive(false);
             camera2.SetActive(true);
-           
+            clickText.SetActive(true);
         }
     }
 
