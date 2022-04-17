@@ -5,12 +5,12 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
-    public Joystick joystick;
-    public float speed = 7f;
+    //public Joystick joystick;
+    public float speed = 15f;
     public Rigidbody rb;
 
 
-    private float vertical;
+    //private float vertical;
     void Update()
     {
         GetMobileInput();
@@ -18,10 +18,18 @@ public class PlayerController : MonoBehaviour
 
     private void GetMobileInput()
     {
-        vertical = joystick.Vertical;
-        if (vertical >= 0.5f)
+        //vertical = joystick.Vertical;
+        if (Input.GetKey(KeyCode.W))
         {
-            transform.localPosition += transform.forward * speed * Time.deltaTime;
-        }       
+            rb.AddForce((transform.forward * speed)/Time.deltaTime);
+            //rb.AddForce(transform.forward * speed);
+            //transform.localPosition += transform.forward * speed * Time.deltaTime;
+
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            rb.AddForce(-(transform.forward * speed) / Time.deltaTime);
+            
+        }
     }
 }

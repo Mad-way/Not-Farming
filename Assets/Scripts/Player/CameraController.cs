@@ -8,7 +8,7 @@ public class CameraController : MonoBehaviour
     public Joystick joysticK;
     private float mouseX;
 
-    [Header("Чувствительность мыши")]
+    [Header("Чувствительность")]
     public float sensivityMouse = 200f;
 
     public Transform Player;

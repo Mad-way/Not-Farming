@@ -12,6 +12,11 @@ public class ShowClicker : MonoBehaviour
     private GameObject joysticks;
     [SerializeField]
     private GameObject clickText;
+<<<<<<< Updated upstream
+=======
+    [SerializeField]
+    private GameObject forwardButton;
+>>>>>>> Stashed changes
     public static Mode mode;
 
 
@@ -24,6 +29,7 @@ public class ShowClicker : MonoBehaviour
         if (mode == Mode.ClickerMode)
         {
             mode = Mode.TractorMode;
+            forwardButton.SetActive(true);
             tractor.SetActive(true);
             joysticks.SetActive(true);
             camera2.SetActive(false);
@@ -31,6 +37,7 @@ public class ShowClicker : MonoBehaviour
         }
         else {
             mode = Mode.ClickerMode;
+            forwardButton.SetActive(false);
             tractor.SetActive(false);
             joysticks.SetActive(false);
             camera2.SetActive(true);
